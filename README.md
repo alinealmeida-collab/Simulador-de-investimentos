@@ -1,14 +1,3 @@
-# 📊 Simulador de Investimentos - Desafio DIO - Excel com IA Claude
-
-
-O Simulador de investimentos foi desenvolvido em **WPS-Planilhas** software aberto. O aplicativo possui dois objetivos: 
-**(1)** auxiliar o usuário na projeção de patrimônio e rendimentos a partir de aportes iniciais e mensais, utilizando como referência a taxa Selic; e
-**(2)** sugerir a distribuição investimentos em **Fundos de Investimento Imobiliário (FIIs)**, de acordo com diferentes perfis de investidor.
-
-
-
----
-
 ## 🎯 Objetivo
 
 O simulador foi desenvolvido para demonstrar, de forma simples e visual, como diferentes valores de aporte e períodos de investimento podem impactar a formação de patrimônio ao longo do tempo.
@@ -24,7 +13,11 @@ A planilha combina:
 * Distribuição de aportes entre diferentes categorias de FIIs;
 * Perfis de investimento **Conservador, Moderado e Agressivo**.
 
----
+O Simulador de investimentos foi desenvolvido em **WPS-Planilhas** software aberto.
+
+
+
+
 
 ## 🚀 Funcionalidades
 
@@ -32,7 +25,6 @@ A planilha combina:
 
 Permite informar:
 
-* Salário mensal;
 * Aporte inicial;
 * Aporte mensal;
 * Período de investimento em anos.
@@ -42,7 +34,7 @@ A partir dessas informações, o simulador calcula:
 * Sugestão de investimento mensal;
 * Patrimônio acumulado;
 * Rendimento mensal estimado;
-* Projeções para 2, 5, 10 e 15 anos.
+* Informar até 4 projeções contando com o tempo em anos. O simulador inicial a sugestão com 2, 5, 10 e 15 anos.
 
 ### Fundos Imobiliários
 
@@ -84,7 +76,7 @@ O retorno da API possui estrutura semelhante a:
 
 A planilha utiliza o valor retornado pela API para alimentar automaticamente o cálculo da taxa.
 
----
+
 
 ## 🧮 Cálculos
 
@@ -103,7 +95,7 @@ Onde:
 * `D13` = salário mensal;
 * `30%` = percentual sugerido para investimento.
 
----
+
 
 ### 2. Conversão da taxa obtida pela API
 
@@ -153,7 +145,7 @@ A expressão:
 
 é utilizada para obter uma taxa mensal equivalente a partir da taxa informada.
 
----
+
 
 ### 4. Rendimento mensal estimado
 
@@ -170,7 +162,7 @@ Onde:
 * `D23` = patrimônio acumulado;
 * `D21` = taxa utilizada na simulação.
 
----
+
 
 ### 5. Projeções de patrimônio
 
@@ -191,7 +183,7 @@ Os períodos utilizados são:
 
 O mesmo conceito é aplicado aos demais períodos, alterando apenas a quantidade de anos.
 
----
+
 
 ### 6. Rendimento projetado
 
@@ -246,7 +238,7 @@ Onde:
 * `D35` = aporte mensal destinado aos FIIs;
 * `C38` = percentual recomendado para a categoria.
 
----
+
 
 ## 📈 Perfis de investimento
 
@@ -270,7 +262,7 @@ A aba **Configuração** contém três perfis:
 | Hotelarias      |          0% |      10% |       10% |
 | **Total**       |    **100%** | **100%** |  **100%** |
 
----
+
 
 ## 📁 Estrutura da planilha
 
@@ -289,10 +281,6 @@ Contém:
 * Distribuição de FIIs;
 * Seleção de perfil.
 
-### `Planilha1 (2)`
-
-Aba utilizada para a estrutura inicial dos cálculos e validação da lógica do simulador.
-
 ### `Configuração`
 
 Centraliza parâmetros utilizados pelo simulador, incluindo:
@@ -303,11 +291,11 @@ Centraliza parâmetros utilizados pelo simulador, incluindo:
 * Percentuais de distribuição;
 * Chaves utilizadas nas buscas.
 
----
+
 
 ## 🛠️ Tecnologias e recursos utilizados
 
-* **Microsoft Excel**
+* **WPS-Planilhas**
 * Fórmulas financeiras do Excel
 * `PV`
 * `VLOOKUP`
@@ -318,7 +306,6 @@ Centraliza parâmetros utilizados pelo simulador, incluindo:
 * JSON
 * Modelagem de cenários de investimento
 
----
 
 ## ▶️ Como utilizar
 
@@ -333,24 +320,7 @@ Centraliza parâmetros utilizados pelo simulador, incluindo:
 9. Informe o valor do aporte mensal destinado aos FIIs.
 10. Consulte a distribuição sugerida entre as categorias.
 
----
 
-## 📊 Exemplo
-
-Considerando um cenário hipotético:
-
-```text
-Salário mensal:       R$ 10.000
-Aporte inicial:       R$ 20.000
-Aporte mensal:        R$ 2.000
-Período:              30 anos
-Aporte para FIIs:     R$ 500/mês
-Perfil:               Moderado
-```
-
-O simulador utiliza esses dados para projetar o patrimônio e apresentar uma possível distribuição do aporte entre as categorias de FIIs configuradas.
-
----
 
 ## ⚠️ Observações importantes
 
@@ -362,26 +332,7 @@ Rentabilidade passada ou taxas de referência não garantem resultados futuros.
 
 A distribuição entre FIIs apresentada pelo simulador também não deve ser interpretada como recomendação individual de investimento.
 
-> **Atenção:** antes de utilizar o simulador para projeções financeiras reais, recomenda-se validar a periodicidade da taxa obtida pela API e sua conversão para a taxa mensal utilizada nos cálculos.
 
----
-
-## 📌 Possíveis melhorias futuras
-
-Algumas funcionalidades que podem ser incorporadas ao projeto:
-
-* [ ] Conversão mais precisa da taxa anual para mensal;
-* [ ] Inclusão de inflação e rentabilidade real;
-* [ ] Simulação de diferentes cenários de Selic;
-* [ ] Comparação entre diferentes investimentos;
-* [ ] Inclusão de IR e outras taxas;
-* [ ] Simulação de reinvestimento de dividendos;
-* [ ] Gráficos de evolução patrimonial;
-* [ ] Histórico da Selic;
-* [ ] Automação da atualização dos dados;
-* [ ] Expansão das categorias e parâmetros de FIIs.
-
----
 
 ## 📚 Objetivo do projeto no GitHub
 
@@ -394,17 +345,3 @@ Este projeto faz parte do meu portfólio de **Excel, análise de dados, automaç
 * Automatização de cálculos;
 * Modelagem de cenários;
 * Organização de informações para tomada de decisão.
-
----
-
-## ⚖️ Disclaimer
-
-Este simulador não constitui recomendação, indicação ou aconselhamento financeiro.
-
-Os resultados são meramente ilustrativos e dependem das premissas utilizadas no momento da simulação. Antes de tomar qualquer decisão de investimento, considere seu perfil, objetivos, situação financeira e, quando necessário, procure orientação de um profissional habilitado.
-
----
-
-### 👩‍💻 Projeto
-
-Desenvolvido como projeto prático para explorar a integração entre **Excel, APIs, automação, análise de dados e simulação financeira**.
