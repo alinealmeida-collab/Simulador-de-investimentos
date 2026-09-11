@@ -1,4 +1,24 @@
-## 🎯 Objetivo
+## 📚 Objetivo do projeto no GitHub
+
+
+Este projeto faz parte do meu portfólio de **Excel, análise de dados, automação e modelagem de cenários**, demonstrando a aplicação prática de:
+
+* Funções financeiras;
+* Tratamento de dados;
+* Integração com APIs;
+* Estruturação de parâmetros;
+* Automatização de cálculos;
+* Modelagem de cenários;
+* Organização de informações para tomada de decisão.
+
+
+
+
+
+
+
+
+## 🎯 Objetivo do Simulador de Investimentos
 
 O simulador foi desenvolvido para demonstrar, de forma simples e visual, como diferentes valores de aporte e períodos de investimento podem impactar a formação de patrimônio ao longo do tempo.
 
@@ -12,10 +32,6 @@ A planilha combina:
 * Sugestão de investimento baseada na renda mensal;
 * Distribuição de aportes entre diferentes categorias de FIIs;
 * Perfis de investimento **Conservador, Moderado e Agressivo**.
-
-O Simulador de investimentos foi desenvolvido em **WPS-Planilhas** software aberto.
-
-
 
 
 
@@ -51,7 +67,7 @@ A partir do perfil selecionado, o valor é distribuído entre seis categorias:
 
 A distribuição percentual é armazenada na aba **Configuração** e recuperada automaticamente de acordo com o perfil selecionado.
 
----
+
 
 ## 🔌 Integração com API
 
@@ -117,7 +133,7 @@ Essa fórmula:
 6. Converte o resultado em número;
 7. Divide por `100` para obter o percentual em formato decimal.
 
----
+
 
 ### 3. Patrimônio acumulado
 
@@ -195,7 +211,7 @@ Para cada período, o rendimento mensal estimado é calculado sobre o patrimôni
 =C27*((1+D21)^(1/12)-1)
 ```
 
----
+
 
 ## 🏢 Distribuição de FIIs
 
@@ -221,7 +237,7 @@ Exemplo:
 Moderado-PAPEL
 ```
 
----
+
 
 ### 💰 Valor destinado a cada categoria
 
